@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Mark Prediction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&Tilt+Prism&Noto+Serif:wght@600Bricolage+Grotesque:opsz,wght@10..48,800&Poppins:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: rgb(16, 17, 18);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            position:fix;
+            justify-content: space-around;
+            align-items: center;
+            height: 200px;
+            background-color: rgb(9, 9, 88);
+        }
+
+        nav ul {
+            display: flex;
+             /* justify-content: center; */
+        }
+
+        .left {
+            color:rgb(244, 241, 235);
+            font-size: 4rem;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .purple {
+            color: purple;
+        }
+
+        .project {
+            display: flex;
+            height: 92vh;
+            margin: 10px 100px;
+            max-width: 90vw;
+            font-size: 1.5rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+       .button_css {
+            color: #494949;
+            text-transform: uppercase;
+            text-decoration: none;
+            background: #ffffff;
+            padding: 0.5%;
+            border: 1.5px solid #494949;
+            display: inline-block;
+            transition: all 0.4s ease 0s;
+        }
+
+       .button_css:hover {
+            color: #ffffff;
+            background: #967be0;
+            border-color: #6c26d4;
+            transition: all 0.4s ease 0s;
+            font-family: 'Noto Serif', serif;
+       }
+
+       .login {
+            font-size: 2.5rem;
+            margin:auto;
+
+       }
+
+       .pur {
+            color: #802a83;
+            font-size: 2.5rem;
+            background: #ffffff;
+            padding: 0.4%;
+            border: 0.5px solid #494949;
+            display: inline-block;
+            font-family: 'Noto Serif', serif;
+       }
+
+       .po {
+            color: #efca15;
+            font-size: 2rem;
+            font-family: 'Noto Serif', serif;
+       }
+
+       .sh{
+           align-items: center;
+           font-size: 2.5rem;
+           margin: auto;
+           color:rgb(175, 140, 64);
+           font-family: 'Noto Serif', serif;
+       }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">STUDENTS SGPA PREDICTION</div>
+        </nav>
+    </header>
+    <main>
+        <!--project-->
+        <hr>
+        <section>
+            <div class="login">
+                <!-- Form Get input to predict Marks-->
+                <center>
+                    <form action="{{ url_for('predict')}}" method="post"> <!-- action=='/predict' also works-->
+                        <h2> <span class="pur">FIFTH SEMESTER SGPA PREDICTION </span> </h2><br>
+                        <span class="sh">
+                            SGPA1: <input align="center" type="number" step="0.01" name="SGPA1"
+                                 style="height:40px;font-size:25px;width:70px;"  /><br><br>
+                            SGPA2: <input align="center" type="number" step="0.01" name="SGPA2"
+                                 style="height:40px;font-size:25px;width:70px;"  /><br><br>
+                            SGPA3: <input align="center" type="number" step="0.01" name="SGPA3"
+                                 style="height:40px;font-size:25px;width:70px;"  /><br><br>
+                            SGPA4: <input align="center" type="number" step="0.01" name="SGPA4"
+                                 style="height:40px;font-size:25px;width:70px;"  /><br><br>
+                        <!-- Show button  button_cont -->
+                        <div align="center"><a class="btn btn-secondary" target="_blank"
+                                rel="nobfollow noopener">
+                                <button type="submit" class="btn btn-primary " >Predict
+                                        SGPA5</button></a>
+                        </div>
+
+                    </form>
+                </center>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
