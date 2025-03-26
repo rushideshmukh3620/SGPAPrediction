@@ -52,6 +52,6 @@ def predict():
     return render_template('output.html', sgpa1=sgpa1, sgpa2=sgpa2, sgpa3=sgpa3, sgpa4=sgpa4, sgpa5=sgpa5, pie_path="static/pie.png")
 
 if __name__ == "__main__":
-    app.run(host='127.0.0.1', port=5000)
+    app.run(host='0.0.0.0', port=5000)
     # from werkzeug.serving import run_simple
     # run_simple('localhost', 5000, app)
